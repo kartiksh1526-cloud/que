@@ -1,0 +1,26 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 240 190" fill="none">
+  <defs>
+    <linearGradient id="core" x1="83" y1="54" x2="162" y2="137" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#73F2EF"/><stop offset="1" stop-color="#7798FF"/>
+    </linearGradient>
+    <radialGradient id="glow" cx="0" cy="0" r="1" gradientTransform="matrix(0 82 -82 0 121 94)" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#56E6ED" stop-opacity=".25"/><stop offset="1" stop-color="#56E6ED" stop-opacity="0"/>
+    </radialGradient>
+  </defs>
+  <circle cx="121" cy="94" r="82" fill="url(#glow)"/>
+  <g stroke="#90F4F1" stroke-opacity=".58" stroke-width="1.5">
+    <path d="m120 91-52-37m52 37 51-38m-51 38 57 33m-57-33-51 38m51-38v-62m0 62 2 65"/>
+    <path d="m68 54-24 4m24-4-4-23m103 26 23-11m-23 11 7-25m-1 101 22 13m-22-13 2 23m-109-7-19 14m19-14-4 23m54-116 12-19m-12 19-14-17"/>
+  </g>
+  <g fill="#8CF4F0">
+    <circle cx="68" cy="54" r="5"/><circle cx="171" cy="53" r="5"/><circle cx="177" cy="124" r="5"/>
+    <circle cx="69" cy="129" r="5"/><circle cx="120" cy="29" r="4"/><circle cx="122" cy="156" r="4"/>
+    <circle cx="44" cy="58" r="3"/><circle cx="64" cy="31" r="3"/><circle cx="194" cy="42" r="3"/>
+    <circle cx="177" cy="26" r="3"/><circle cx="199" cy="137" r="3"/><circle cx="201" cy="147" r="2.5"/>
+    <circle cx="50" cy="143" r="3"/><circle cx="46" cy="152" r="2.5"/><circle cx="108" cy="10" r="2.5"/>
+  </g>
+  <circle cx="120" cy="94" r="43" fill="#102d5a" fill-opacity=".9" stroke="url(#core)" stroke-width="2"/>
+  <circle cx="120" cy="94" r="34" stroke="#91F4F2" stroke-opacity=".24" stroke-dasharray="2 5"/>
+  <text x="120" y="105" fill="url(#core)" font-family="Arial,sans-serif" font-size="37" font-weight="700" letter-spacing="1" text-anchor="middle">AI</text>
+  <path d="m213 79 6 6 11-13" stroke="#A1FFF1" stroke-linecap="round" stroke-linejoin="round" stroke-width="3"/>
+</svg>

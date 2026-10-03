@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Quotation</title><link rel="stylesheet" href="css/style.css"><link rel="stylesheet" href="css/quotation.css"></head><body data-theme="dark">
+<nav><b>JK Hydraulic</b><a href="dashboard.html">Dashboard</a><a href="quotation.html" class="on">New Quotation</a><a href="history.html">History</a><span class="sp"></span><button type="button" class="theme-toggle" id="themeToggle" aria-label="Switch to light theme" title="Switch to light theme"><span id="themeIcon" aria-hidden="true">☼</span><span id="themeLabel">Light mode</span></button><a href="#" onclick="logout()">Logout</a></nav>
+<main>
+<div class="card"><div class="grid">
+<div><label for="customer">Customer Name *</label><input id="customer" autocomplete="organization" required></div><div><label for="address">Address / GSTIN</label><input id="address" autocomplete="street-address"></div><div><label for="attn">Attention</label><input id="attn"></div>
+<div><label for="qno">Quotation Number</label><input id="qno"></div><div><label for="date">Date</label><input id="date"></div><div><label for="valid">Valid For</label><input id="valid"></div></div></div>
+<div class="card items"><table><thead><tr><th>#</th><th>Description</th><th>Qty</th><th>Rate (₹)</th><th>GST %</th><th class="r">Amount</th><th></th></tr></thead><tbody id="rows"></tbody></table>
+<button class="s" type="button" onclick="addRow()" style="margin-top:8px">+ Add Item</button>
+<div class="sum"><div><span>Subtotal</span><span id="sub"></span></div><div><label for="discount">Discount %</label><input id="discount" type="number" min="0" max="100" step="any" value="0" oninput="refresh()" style="width:90px;text-align:right"></div>
+<div><span>Discount</span><span id="dsc"></span></div><div><span>GST</span><span id="gstT"></span></div><div class="tot"><span>Total</span><span id="total"></span></div></div></div>
+<div class="card"><label for="terms">Terms &amp; Conditions</label><textarea id="terms" rows="6"></textarea>
+<div class="actions"><button onclick="save(false)">Save</button><button class="s" onclick="save(true)">Save &amp; Preview</button></div></div>
+</main>
+<script src="js/auth.js"></script><script src="js/quotation.js"></script>
+</body></html>

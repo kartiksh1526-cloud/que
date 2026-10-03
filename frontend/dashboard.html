@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Dashboard</title><link rel="stylesheet" href="css/style.css"><link rel="stylesheet" href="css/dashboard.css"></head><body data-theme="dark">
+<nav><b>JK Hydraulic</b><a href="dashboard.html" class="on">Dashboard</a><a href="quotation.html">New Quotation</a><a href="history.html">History</a><span class="sp"></span><button type="button" class="theme-toggle" id="themeToggle" aria-label="Switch to light theme" title="Switch to light theme"><span id="themeIcon" aria-hidden="true">☼</span><span id="themeLabel">Light mode</span></button><a
+     href="#" onclick="logout()">Logout</a></nav>
+<main>
+<section class="hero">
+  <div class="hero-copy"><div class="eyebrow">Smarter quotation management</div><h1>Your business, moving forward.</h1><p>Create polished quotations, keep customer details organized, and track every order from one simple workspace.</p><a class="btn" href="quotation.html">Create a quotation&nbsp; →</a></div>
+  <img class="hero-art" src="images/hydraulic-illustration.svg" alt="Illustration of a precision hydraulic cylinder">
+</section>
+<div class="head"><h2>Overview</h2></div>
+<div class="stats"><div class="stat"><small>Total Quotations</small><div id="sCount">–</div></div><div class="stat"><small>Total Quotation Value</small><div id="sVal">–</div></div><div class="stat"><small>Created This Month</small><div id="sMonth">–</div></div></div>
+<div class="card"><h3 style="margin-top:0">Recent Quotations</h3><div class="table-wrap"><table class="t"><thead><tr><th>Quotation No.</th><th>Customer</th><th class="r">Total</th><th></th></tr></thead><tbody id="recent"></tbody></table></div></div>
+</main>
+<script src="js/auth.js"></script><script src="js/dashboard.js"></script>
+</body></html>

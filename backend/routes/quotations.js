@@ -1,0 +1,14 @@
+const r = require('express').Router();
+const { requireAuth } = require('../controllers/authController');
+const c = require('../controllers/quotationController');
+r.use(requireAuth);
+r.get('/company', c.company);
+r.get('/next-no', c.nextNo);
+r.get('/stats', c.stats);
+r.get('/', c.list);
+r.post('/', c.create);
+r.get('/:id', c.get);
+r.put('/:id', c.update);
+r.delete('/:id', c.remove);
+r.get('/:id/docx', c.docx);
+module.exports = r;

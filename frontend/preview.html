@@ -1,0 +1,10 @@
+<!DOCTYPE html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Preview</title><link rel="stylesheet" href="css/style.css"><link rel="stylesheet" href="css/quotation.css"></head><body data-theme="dark">
+<nav><b>JK Hydraulic</b><a href="/dashboard.html">Dashboard</a><a href="/quotation.html">New Quotation</a><a href="/history.html">History</a><span class="sp"></span><button type="button" class="theme-toggle" id="themeToggle" aria-label="Switch to light theme" title="Switch to light theme"><span id="themeIcon" aria-hidden="true">☼</span><span id="themeLabel">Light mode</span></button><a href="#" onclick="logout()">Logout</a></nav>
+<main>
+<div class="actions np" style="margin:0 0 12px"><button onclick="downloadPdf()">PDF / Print</button><button class="s" onclick="downloadWord()">Word (.docx)</button><a class="btn s" id="editBtn" href="#">Edit</a></div>
+<div class="paper" id="paper" role="status" aria-live="polite">Loading quotation…</div>
+</main>
+<script src="js/auth.js"></script><script src="js/pdf.js"></script><script src="js/word.js"></script>
+</body></html>

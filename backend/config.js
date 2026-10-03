@@ -1,12 +1,10 @@
 const { randomBytes } = require('node:crypto');
-const PASSWORD = process.env.APP_PASSWORD;
-
-if (!PASSWORD) {
-  throw new Error('APP_PASSWORD must be set in the environment before starting the application.');
-}
+const GENERATED_PASSWORD = !process.env.APP_PASSWORD;
+const PASSWORD = process.env.APP_PASSWORD || randomBytes(18).toString('base64url');
 
 module.exports = {
   PASSWORD,
+  GENERATED_PASSWORD,
   SECRET: process.env.SECRET_KEY || randomBytes(32).toString('hex'),
   PORT: process.env.PORT || 3000,
   COMPANY: {

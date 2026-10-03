@@ -5,18 +5,15 @@ A quotation management application built with Node.js, Express, SQLite, and a pl
 ## Getting started
 
 Use Node.js 22.13 or later. Node.js 24 LTS is recommended.
-Set `APP_PASSWORD` before starting the application; the server will not use a default login password. If `SECRET_KEY` is not set, a secure session key is generated at startup.
 
 ```powershell
 npm install
-$env:APP_PASSWORD = "your-secure-password"
 npm start
 ```
 
-On macOS or Linux, set the password with `export APP_PASSWORD=your-secure-password`.
-Then open <http://localhost:3000>.
+Then open <http://localhost:3000>. If `APP_PASSWORD` is not set, the server creates a secure temporary password and prints it in the terminal; use that password to sign in. Set `APP_PASSWORD` in your environment if you want to choose your own password. On macOS or Linux, set it with `export APP_PASSWORD=your-secure-password`.
 
-The app uses Node.js's built-in SQLite API, so SQLite does not require a native build.
+The app uses Node.js's built-in SQLite API, so SQLite does not require a native build. If `SECRET_KEY` is not set, a secure session key is generated at startup.
 
 ## Pages
 

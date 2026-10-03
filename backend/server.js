@@ -1,7 +1,7 @@
 const express = require('express');
 const session = require('express-session');
 const path = require('path');
-const { SECRET, PORT } = require('./config');
+const { SECRET, PORT, PASSWORD, GENERATED_PASSWORD } = require('./config');
 const app = express();
 const FRONT = path.join(__dirname, '..', 'frontend');
 
@@ -17,4 +17,10 @@ app.use((req, res, next) => (req.session.ok || open.includes(req.path) || req.pa
 app.get('/', (req, res) => res.redirect('/dashboard.html'));
 app.use(express.static(FRONT));
 
-app.listen(PORT, () => console.log(`JK Quotation System is running at http://localhost:${PORT}`));
+app.listen(PORT, () => {
+  console.log(`JK Quotation System is running at http://localhost:${PORT}`);
+  if (GENERATED_PASSWORD) {
+    console.log(`Temporary login password: ${PASSWORD}`);
+    console.log('Set APP_PASSWORD in your environment to use a password of your choice.');
+  }
+});
